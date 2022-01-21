@@ -1,0 +1,24 @@
+# for dependancies from github, instead of of downloading from npm
+dependencies:
+  # - <organization/repo>@<version>
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+compiler:
+  solc:
+    remappings:
+      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1"
+dotenv: .env
+networks:
+  # default network is automatically set to development
+  default: development
+  mainnet-fork-dev: # another way of testing, forking the mainnet
+    eth_usd_price_feed: "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+    verify: False
+  rinkeby:
+    eth_usd_price_feed: "0x8A753747A1Fa494EC906cE90E9f37563A8AF630e"
+    verify: True
+  ganache-local:
+    verify: False
+  development:
+    verify: False
+wallets:
+  from_key: ${PRIVATE_KEY} # will search for enviroment variable "PRIVATE_KEY"

@@ -1,0 +1,7 @@
+{
+    "solidity.defaultCompiler": "remote",
+    "solidity.compileUsingRemoteVersion": "v0.6.6+commit.6c089d02",
+    "solidity.remappings": [
+        "@chainlink=C:/Users/TPNS/.brownie/packages/smartcontractkit/chainlink-brownie-contracts@1.1.1"
+    ]
+} // set solidity remappings so that pseudo errors went away
